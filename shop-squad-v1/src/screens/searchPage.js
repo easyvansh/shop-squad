@@ -68,8 +68,8 @@ const styles = StyleSheet.create({
     position: "absolute",
     justifyContent: "center",
     alignContent: "center",
-    height: height * 0.08,
-    width: width * 0.82,
+    height: height * 0.09,
+    width: width * 0.85,
     right: 2,
     // marginBottom:15
   },
@@ -90,7 +90,7 @@ const styles = StyleSheet.create({
     },
     shadowRadius: 10,
     elevation: 10,
-    height: height * 0.07,
+    height: height * 0.09,
     width: width * 0.8,
   },
   searchText: {
@@ -100,8 +100,8 @@ const styles = StyleSheet.create({
     position: "absolute",
     backgroundColor: "rgba(255, 255, 255,0)",
     color: "rgba(169, 169, 169, 1)",
-    fontSize: 16,
-    fontWeight: "500",
+    fontSize: 18,
+    fontWeight: "600",
     fontStyle: "normal",
     textAlign: "left",
     marginTop: 0,
@@ -118,8 +118,8 @@ const styles = StyleSheet.create({
     borderTopRightRadius: width/2,
     borderBottomLeftRadius: width/2,
     borderBottomRightRadius: width/2,
-    width: width * 0.1,
-    height: width * 0.1,
+    width: width * 0.16,
+    height: width * 0.16,
     marginTop: 0,
     right: 0,
     marginBottom: 0,
@@ -137,8 +137,8 @@ const styles = StyleSheet.create({
   iconAwesomeSearch: {
     opacity: 1,
     position: "absolute",
-    width:width * 0.1,
-    height:width * 0.1,
+    width:width * 0.15,
+    height:width * 0.15,
    
   },
 });
