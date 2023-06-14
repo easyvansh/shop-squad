@@ -9,7 +9,8 @@ import {
   TouchableOpacity,
   ScrollView,
   KeyboardAvoidingView,
-  Linking 
+  Linking,
+  Image,
 } from "react-native";
 import Svg, {
   Defs,
@@ -25,15 +26,12 @@ import { NavigationContainer } from "@react-navigation/native";
 // to style respectively and make the app responsive
 const { height, width } = Dimensions.get("window");
 
-const Lines = () => {
-  
-  
+const Content = () => {
   const navigation = useNavigation();
   const handlePress = () => {
     // Navigate to a different page/screen
     navigation.navigate("HomePage");
   };
-
 
   const handleLogoPress = (url) => {
     Linking.openURL(url);
@@ -45,7 +43,6 @@ const Lines = () => {
         <View style={styles.container}>
           <View style={styles.iconContainer}>
             <Svg
-              data-layer="dcb82d92-bb2b-4b3c-9c35-99b099cd875a"
               style={styles.iconMaterialPerson}
               preserveAspectRatio="none"
               viewBox="6 6 50 50"
@@ -57,28 +54,24 @@ const Lines = () => {
 
           <View style={styles.inputContainer}>
             <TextInput
-              data-layer="9051747a-801d-46c9-8524-cb9117c0f1ca"
               style={styles.fullname}
               placeholder="Full Name : "
               placeholderTextColor="rgba(255, 255, 255, 1)"
               underlineColorAndroid="transparent"
             />
             <TextInput
-              data-layer="631764f2-90e8-4cb4-93de-0320546562da"
               style={styles.username}
               placeholder="Username : "
               placeholderTextColor="rgba(255, 255, 255, 1)"
               underlineColorAndroid="transparent"
             />
             <TextInput
-              data-layer="75d588ae-b594-4ba5-90c9-6e88a8d06781"
               style={styles.emailAddress}
               placeholder="Email Address : "
               placeholderTextColor="rgba(255, 255, 255, 1)"
               underlineColorAndroid="transparent"
             />
             <TextInput
-              data-layer="5577b525-464c-42f2-8fee-3c5fc0df1805"
               style={styles.password}
               placeholder="Password : "
               placeholderTextColor="rgba(255, 255, 255, 1)"
@@ -91,36 +84,33 @@ const Lines = () => {
               style={styles.rectangleButton}
               onPress={handlePress}
             >
-              <Text
-                data-layer="ac2a16aa-5359-462a-95e0-437f09566486"
-                style={styles.signUp}
-              >
-                Sign Up
-              </Text>
+              <Text style={styles.signUp}>Sign Up</Text>
             </TouchableOpacity>
 
             <View style={styles.signUpWithContainer}>
-              <Text
-                data-layer="abb2e318-e1a2-46a6-9675-cb38604b1fba"
-                style={styles.signUpWith}
-              >
-                Sign Up With
-              </Text>
-              <View style = {styles.logoContainer}>
-              <TouchableOpacity onPress={() => handleLogoPress('https://www.googlr.com')}>
-               <ReactImage
-                data-layer="5696e5f2-8807-4bbd-acb8-177cb946f606"
-                source={require("./googlelogo.png")}
-                style={styles.googlelogo}
-              /></TouchableOpacity>
-              <TouchableOpacity onPress={() => handleLogoPress('https://www.facebook.com')}>
-              <ReactImage
-                data-layer="e8b343ed-b402-4b38-b5d9-ccee10d11403"
-                source={require("./facebooklogo.png")}
-                style={styles.facebooklogo}
-              /></TouchableOpacity>
+              <Text style={styles.signUpWith}>Sign Up With</Text>
+              <View style={styles.logoContainer}>
+                <TouchableOpacity
+                  onPress={() => handleLogoPress("https://www.google.com")}
+                >
+                  <ReactImage
+                    source={require("./googlelogo.png")}
+                    style={styles.googlelogo}
+                  />
+                </TouchableOpacity>
+                <TouchableOpacity
+                  onPress={() => handleLogoPress("https://www.facebook.com")}
+                >
+                  <ReactImage
+                    source={require("./facebooklogo.png")}
+                    style={styles.facebooklogo}
+                  />
+                </TouchableOpacity>
+              </View>
             </View>
-            </View>
+          </View>
+          <View style = {styles.shopSquadLogoContainer}>
+            <Image style={styles.shopSquadLogo} source={require("./shopsquadlogo.png")}/>
           </View>
         </View>
       </View>
@@ -129,31 +119,39 @@ const Lines = () => {
 };
 
 const styles = StyleSheet.create({
-  everything: {
-    flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
+  screen:{
+    position:'absolute',
+    height:height,
+    width:width,
+    zIndex:2,
   },
   wrapper: {
-    flex: 1,
-    justifyContent: "center",
+    position:'relative',
+    height:height*0.9,
+    width:width,
+    
+    borderColor:'pink',
+    top:40,
     alignItems: "center",
+    left:0,
+    right:0,
+    bottom:0,
   },
   container: {
-    justifyContent: "center",
+    flexDirection:'column',
     alignItems: "center",
-    position: "absolute",
-    top: 0,
-    marginTop: height * 0.2,
-    width: width * 0.9,
-    height: height * 0.8,
+    justifyContent:'center',
+    position: "relative",
+    top: 10,
+    marginTop:0,
     
+    width: width ,
+    height: height*0.8,
   },
   iconContainer: {
-    position: "absolute",
-    top: height * 0.05,
-    marginTop: 15,
-    
+    position: "relative",
+    top:60,
+    marginTop: 10,
   },
   iconMaterialPerson: {
     opacity: 1,
@@ -161,20 +159,18 @@ const styles = StyleSheet.create({
     height: width * 0.2,
   },
   inputContainer: {
-    position: "absolute",
-    height: height * 0.3,
-    width: width * 0.6,
-    paddingHorizontal: 10,
-    paddingVertical: 5,
-    top: height * 0.05,
-    marginTop: 120,
+    position: "relative",
+    height: 300,
+    width: 250,
+    top:35,
+    marginTop:15,
+    paddingHorizontal: 18,
     justifyContent: "center",
     alignContent: "center",
-    
   },
   fullname: {
     color: "rgba(255, 255, 255, 1)",
-    width: width * 0.5,
+    width: "100%",
     height: height * 0.05,
     paddingHorizontal: 5,
     paddingVertical: 5,
@@ -182,7 +178,7 @@ const styles = StyleSheet.create({
     opacity: 1,
     position: "relative",
     fontSize: 13,
-    fontWeight: "500",
+    fontWeight: "800",
     fontStyle: "normal",
     textAlign: "left",
     borderBottomColor: "white",
@@ -190,7 +186,7 @@ const styles = StyleSheet.create({
   },
   username: {
     color: "rgba(255, 255, 255, 1)",
-    width: width * 0.5,
+    width: "100%",
     height: height * 0.05,
     paddingHorizontal: 5,
     paddingVertical: 5,
@@ -198,7 +194,7 @@ const styles = StyleSheet.create({
     opacity: 1,
     position: "relative",
     fontSize: 13,
-    fontWeight: "500",
+    fontWeight: "800",
     fontStyle: "normal",
     textAlign: "left",
     borderBottomColor: "white",
@@ -206,7 +202,7 @@ const styles = StyleSheet.create({
   },
   emailAddress: {
     color: "rgba(255, 255, 255, 1)",
-    width: width * 0.5,
+    width: "100%",
     height: height * 0.05,
     paddingHorizontal: 5,
     paddingVertical: 5,
@@ -214,7 +210,7 @@ const styles = StyleSheet.create({
     opacity: 1,
     position: "relative",
     fontSize: 13,
-    fontWeight: "500",
+    fontWeight: "800",
     fontStyle: "normal",
     textAlign: "left",
     borderBottomColor: "white",
@@ -222,7 +218,7 @@ const styles = StyleSheet.create({
   },
   password: {
     color: "rgba(255, 255, 255, 1)",
-    width: width * 0.5,
+    width: "100%",
     height: height * 0.05,
     paddingHorizontal: 5,
     paddingVertical: 5,
@@ -230,19 +226,18 @@ const styles = StyleSheet.create({
     opacity: 1,
     position: "relative",
     fontSize: 13,
-    fontWeight: "500",
+    fontWeight: "800",
     fontStyle: "normal",
     textAlign: "left",
     borderBottomColor: "white",
     borderBottomWidth: 1,
   },
   buttonContainer: {
-    position: "absolute",
     width: width * 0.65,
     height: height * 0.125,
-    
-    top: height * 0.05,
-    marginTop: height * 0.5,
+    position: "relative",
+    top:50,
+    marginTop:30,
     justifyContent: "center",
     alignItems: "center",
   },
@@ -254,12 +249,12 @@ const styles = StyleSheet.create({
     backgroundColor: "rgba(255, 255, 255, 1)",
     justifyContent: "center",
     alignItems: "center",
-    borderTopLeftRadius: width/2,
-    borderTopRightRadius: width/2,
-    borderBottomLeftRadius: width/2,
-    borderBottomRightRadius: width/2,
+    borderTopLeftRadius: width / 2,
+    borderTopRightRadius: width / 2,
+    borderBottomLeftRadius: width / 2,
+    borderBottomRightRadius: width / 2,
     shadowColor: "black",
-    shadowOpacity: 0.5,
+    shadowOpacity: 0.9,
     shadowOffset: {
       width: 0,
       height: 50,
@@ -270,21 +265,19 @@ const styles = StyleSheet.create({
   signUp: {
     opacity: 1,
     color: "rgba(56, 199, 130, 1)",
-    position: "absolute",
+    position: "relative",
     fontSize: 20,
-    fontWeight: "800",
+    fontWeight: "900",
     fontStyle: "normal",
   },
-  signUpWithContainer:{
-  position: "absolute",
-  width: width * 0.65,
-  height: height * 0.125,
-  
-  top: height * 0.08,
-  marginTop: height * 0.05,
-  justifyContent: "center",
-  alignItems: "center",
-},
+  signUpWithContainer: {
+    position: "relative",
+    width: width * 0.3,
+    height: height * 0.12,
+    marginTop: 15,
+    justifyContent: "center",
+    alignItems: "center",
+  },
   signUpWith: {
     opacity: 1,
     position: "absolute",
@@ -293,35 +286,44 @@ const styles = StyleSheet.create({
     fontWeight: "500",
     fontStyle: "normal",
     textAlign: "left",
-    
-    top:0,
+
+    top: 0,
     marginTop: 0,
   },
-  logoContainer:{
-    flexDirection:'row',
-  
-    
-    
-    width: width * 0.2,
-    height: width * 0.1,
+  logoContainer: {
+    flexDirection: "row",
+    width: width * 0.4,
+    height: width * 0.2,
     justifyContent: "center",
     alignItems: "center",
-    
   },
   googlelogo: {
     opacity: 1,
     position: "relative",
-    width: width * 0.06,
-    height: width * 0.06,
-    marginRight:5
+    width: width * 0.07,
+    height: width * 0.07,
+    marginRight: 8,
   },
   facebooklogo: {
     opacity: 1,
     position: "relative",
-    width: width * 0.06,
-    height: width * 0.06,
-    marginLeft:5
+    width: width * 0.07,
+    height: width * 0.07,
+    marginLeft: 8,
   },
+  shopSquadLogoContainer:{
+    
+    position: "relative",
+    height:width * 0.4,
+    top:80,
+    width:width,
+    left:0,
+    bottom: 0,
+    },
+  shopSquadLogo:{
+    height:width * 0.35,
+    width:width * 0.35,
+  }
 });
 
-export default Lines;
+export default Content;
