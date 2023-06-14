@@ -50,28 +50,35 @@ const SearchBar = () => {
 
 const styles = StyleSheet.create({
   safeArea: {
-    flex: 1,
-    height: "100%",
-    width: "100%",
+    flex: 0,
+    
   },
   container: {
-    position: "relative",
-    alignItems: "center",
-    height: height*(1.3),
-    width: "100%",
-    top: Platform.OS === "android" ? 20 : 10,
-    paddingTop: Platform.OS === "android" ? 15 : 5, // Adjust paddingTop for Android
+    flex: 0,
+    position: "absolute",
+    width: "90%",
+    right:0,
+    marginRight:5,
+    width: width * 0.8,
+    top: Platform.OS === "android" ? 30 : 20,
+    borderTopLeftRadius: width / 2,
+    borderTopRightRadius: width / 2,
+    borderBottomLeftRadius: width / 2,
+    borderBottomRightRadius: width / 2,
+    
   },
   searchContainer: {
-    flex: 1,
-    marginTop: 15,
-    position: "absolute",
+    position: "relative",
     justifyContent: "center",
     alignContent: "center",
-    height: height * 0.08,
-    width: width * 0.82,
-    right: 2,
-    // marginBottom:15
+    right: 0,
+    height: 80,
+    width: width * 0.8,
+    borderTopLeftRadius: width / 2,
+    borderTopRightRadius: width / 2,
+    borderBottomLeftRadius: width / 2,
+    borderBottomRightRadius: width / 2,
+    alignItems: "center",
   },
   searchBar: {
     justifyContent: "center",
@@ -91,7 +98,7 @@ const styles = StyleSheet.create({
     shadowRadius: 10,
     elevation: 10,
     height: height * 0.07,
-    width: width * 0.8,
+    width: width * 0.78,
   },
   searchText: {
     opacity: 1,

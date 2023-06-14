@@ -1,4 +1,5 @@
 import React from "react";
+import { Dimensions } from "react-native";
 import {View,StyleSheet } from "react-native";
 import Svg, {
   Defs,
@@ -7,6 +8,8 @@ import Svg, {
   Text as SvgText,
   Image as SvgImage,
 } from "react-native-svg";
+
+const {height,width} = Dimensions.get('window')
 
 const BgEllipse = () => {
   return (
@@ -53,10 +56,15 @@ const BgEllipse = () => {
 };
 
 const styles = StyleSheet.create({
-
+  bgContainer:{
+    position:'relative',
+    flex:1,
+    top:-50,
+    zIndex:1,
+  },
   signUpPage_ellipse1: {
     opacity: 1,
-    position: "absolute",
+    position: "relative",
     marginTop: 0,
     marginRight: 0,
     marginBottom: 0,
@@ -67,11 +75,13 @@ const styles = StyleSheet.create({
     paddingLeft: 0,
     width: 1027,
     height: 1057,
-    left: -83,
-    top: -248,
-  },  signUpPage_ellipse2: {
+    left: -78,
+    top: -240,
+    zIndex:1,
+  },
+    signUpPage_ellipse2: {
     opacity: 1,
-    position: "absolute",
+    position:'absolute',
     marginTop: 0,
     marginRight: 0,
     marginBottom: 0,
@@ -82,8 +92,9 @@ const styles = StyleSheet.create({
     paddingLeft: 0,
     width: 1027,
     height: 1057,
-    left: -44,
-    top: -168,
+    left: -45,
+    top: -170,
+    zIndex:1,
 
   },
 });

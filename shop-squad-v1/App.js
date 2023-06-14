@@ -7,6 +7,8 @@ import HomePage from './src/screens/homePage';
 import SearchPage from './src/screens/searchPage';
 import { createDrawerNavigator } from "@react-navigation/drawer";
 import SideMenuScreen from './src/screens/sideMenu';
+import ProductDescription from './src/screens/productDescription';
+import MySquad from './src/screens/mySquad';
 
 
 const Stack = createStackNavigator();
@@ -21,29 +23,30 @@ function StackNavigator() {
       {/* <Stack.Screen name="SignUpPage" component={SignUpPage} /> */}
       <Stack.Screen name="HomePage" component={HomePage} />
       <Stack.Screen name="SearchPage" component={SearchPage} />
+      <Stack.Screen name="ProductDescription" component={ProductDescription} />
+      <Stack.Screen name="MySquad" component={MySquad} />
       </Stack.Navigator> 
   );
 }
+
 const Drawer = createDrawerNavigator();
 
 function DrawerNavigator() {
   return (
     // <SearchPage/>
+    // <SignUpPage/>
     <Drawer.Navigator screenOptions={{headerShown:false,}}
         initialRouteName="SignUpPage"
         drawerContent={(props) => <SideMenuScreen {...props} />}
         >
           <Drawer.Screen name="SignUpPage" component={SignUpPage} />
         <Drawer.Screen name="HomePage" component={StackNavigator} />
-        {/* <Drawer.Screen name="HomeStack" component={StackNavigator} /> */}
       </Drawer.Navigator>
   );
 }
 
   return (
-    // <SearchPage/>
     <NavigationContainer>
-   
    <DrawerNavigator />
   </NavigationContainer>
   );

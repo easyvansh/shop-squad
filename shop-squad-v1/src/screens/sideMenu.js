@@ -1,6 +1,7 @@
 import React from 'react';
-import{View,SafeAreaView,StyleSheet,ScrollView,Text,ImageBackground,Dimensions,Image} from 'react-native';
+import{View,SafeAreaView,StyleSheet,ScrollView,Text,ImageBackground,Dimensions,Image, TouchableOpacity} from 'react-native';
 
+import { useNavigation } from '@react-navigation/native';
 
 const {height,width} = Dimensions.get('window');
 
@@ -8,9 +9,14 @@ const SideMenuScreen = ({ navigation }) => {
     const closeMenu = () => {
       navigation.closeDrawer();
     };
+    // const navigation = useNavigation();
+
+  const handleLogout = () => {
+    navigation.navigate('SignUpPage'); 
+  };
   
     return (
-        <SafeAreaView >
+        // <SafeAreaView  >
           <ScrollView >
             <ImageBackground style={styles.background} source = {require('./components/sideMenu/bg.png')}>
             <View style={styles.container} >
@@ -25,8 +31,8 @@ const SideMenuScreen = ({ navigation }) => {
             </View>
             <View style = {styles.commands}>
             <View style = {styles.commandContainer}>
-                <View style = {styles.commandTextContainer}>
-                <Text style = {styles.commandText}>Home</Text>
+                <View style = {styles.commandTextContainerActive}>
+                <Text style = {styles.commandTextActive}>Home</Text>
                 </View>
                 <View style = {styles.commandTextContainer}>
 
@@ -53,31 +59,33 @@ const SideMenuScreen = ({ navigation }) => {
             <Text style = {styles.commandText}>My Squad</Text>
                 </View>
             </View>
-            <View style = {styles.serviceCommands}>
+            <View style = {styles.commandContainer}>
             <View style = {styles.commandTextContainer}>
 
             <Text style = {styles.commandText}>
                 Settings</Text>
                 </View>
-                <View style = {styles.commandTextContainer}>
+            <TouchableOpacity onPress={handleLogout}>
+                <View style = {styles.serviceCommandTextcontainerActive}>
 
             <Text style = {styles.serviceCommandText}>Logout</Text>
                 </View>
+            </TouchableOpacity>
             </View>
             </View>
             </View>
           </View>
           </ImageBackground>
           </ScrollView>
-      </SafeAreaView>
     );
   };
 
 const styles = StyleSheet.create({
-    
+
     container:{
         flex:1,
         height:height,
+        borderWidth:5,
         width:width*0.8,
         justifyContent:'center',
         alignItems: 'center',
@@ -86,6 +94,8 @@ const styles = StyleSheet.create({
         flex: 1,
         resizeMode: 'cover',
         justifyContent: 'center',
+        width:width,
+        height:height*1.1,
     },
     innerContainer:{
         height:height*0.9,
@@ -133,9 +143,10 @@ const styles = StyleSheet.create({
         // justifyContent: 'center',
     },
     userName:{
-        fontSize:32,
+        fontSize: 22,
         fontWeight:'800',
-        color:"rgba(56, 199, 130, 1)"
+        color:"rgba(56, 199, 130, 1)",
+        opacity:0.8,
     },
     commands:{
         position:'relative',
@@ -164,17 +175,50 @@ const styles = StyleSheet.create({
         alignContent:'center',
         justifyContent:'center',
     },
+    commandTextContainerActive:{
+        width:width*(0.5),
+        height:height*(0.038),
+        alignItems:'flex-start',
+        borderRadius:(width*0.5)/64,
+        marginHorizontal:25,
+        paddingHorizontal:40,
+        marginVertical:2.5,
+        borderWidth:0.2,
+        alignContent:'center',
+        justifyContent:'center',
+        backgroundColor:"rgba(56, 199, 130, 0.1)",
+    },
+    commandTextActive:{
+        fontSize:18,
+        opacity:0.6,
+        fontWeight:'800',
+        color:"rgba(56, 199, 130, 0.8)"
+    },
     commandText:{
         fontSize:18,
-        opacity:0.8,
+        opacity:0.6,
         fontWeight:'800',
-        color:"rgba(56, 199, 130, 1)"
+        color:"grey"
     },
+    serviceCommandTextcontainerActive:{
+        width:width*(0.5),
+        height:height*(0.038),
+        alignItems:'flex-start',
+        borderRadius:(width*0.5)/64,
+        marginHorizontal:25,
+        paddingHorizontal:40,
+        marginVertical:2.5,
+        borderWidth:0.2,
+        alignContent:'center',
+        justifyContent:'center',
+        backgroundColor:"rgba(225, 0, 0, 0.1)"
+    }
+        ,
     serviceCommandText:{
         fontSize:18,
-        opacity:0.8,
+        opacity:0.7,
         fontWeight:'800',
-        color:"red"
+        color:"rgba(225, 0, 0, 0.8)"
     },
 })
 

@@ -26,7 +26,7 @@ import { NavigationContainer } from "@react-navigation/native";
 // to style respectively and make the app responsive
 const { height, width } = Dimensions.get("window");
 
-const Lines = () => {
+const Content = () => {
   const navigation = useNavigation();
   const handlePress = () => {
     // Navigate to a different page/screen
@@ -119,29 +119,39 @@ const Lines = () => {
 };
 
 const styles = StyleSheet.create({
-  everything: {
-    flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
+  screen:{
+    position:'absolute',
+    height:height,
+    width:width,
+    zIndex:2,
   },
   wrapper: {
-    flex: 1,
-    justifyContent: "center",
+    position:'relative',
+    height:height*0.9,
+    width:width,
+    
+    borderColor:'pink',
+    top:40,
     alignItems: "center",
+    left:0,
+    right:0,
+    bottom:0,
   },
   container: {
-    justifyContent: "center",
+    flexDirection:'column',
     alignItems: "center",
-    position: "absolute",
-    top: 0,
-    marginTop: height * 0.2,
-    width: width * 0.9,
-    height: height * 0.8,
+    justifyContent:'center',
+    position: "relative",
+    top: 10,
+    marginTop:0,
+    
+    width: width ,
+    height: height*0.8,
   },
   iconContainer: {
-    position: "absolute",
-    top: height * 0.05,
-    marginTop: 15,
+    position: "relative",
+    top:60,
+    marginTop: 10,
   },
   iconMaterialPerson: {
     opacity: 1,
@@ -149,19 +159,18 @@ const styles = StyleSheet.create({
     height: width * 0.2,
   },
   inputContainer: {
-    position: "absolute",
-    height: height * 0.3,
-    width: width * 0.6,
-    paddingHorizontal: 10,
-    paddingVertical: 5,
-    top: height * 0.05,
-    marginTop: 120,
+    position: "relative",
+    height: 300,
+    width: 250,
+    top:35,
+    marginTop:15,
+    paddingHorizontal: 18,
     justifyContent: "center",
     alignContent: "center",
   },
   fullname: {
     color: "rgba(255, 255, 255, 1)",
-    width: width * 0.5,
+    width: "100%",
     height: height * 0.05,
     paddingHorizontal: 5,
     paddingVertical: 5,
@@ -169,7 +178,7 @@ const styles = StyleSheet.create({
     opacity: 1,
     position: "relative",
     fontSize: 13,
-    fontWeight: "500",
+    fontWeight: "800",
     fontStyle: "normal",
     textAlign: "left",
     borderBottomColor: "white",
@@ -177,7 +186,7 @@ const styles = StyleSheet.create({
   },
   username: {
     color: "rgba(255, 255, 255, 1)",
-    width: width * 0.5,
+    width: "100%",
     height: height * 0.05,
     paddingHorizontal: 5,
     paddingVertical: 5,
@@ -185,7 +194,7 @@ const styles = StyleSheet.create({
     opacity: 1,
     position: "relative",
     fontSize: 13,
-    fontWeight: "500",
+    fontWeight: "800",
     fontStyle: "normal",
     textAlign: "left",
     borderBottomColor: "white",
@@ -193,7 +202,7 @@ const styles = StyleSheet.create({
   },
   emailAddress: {
     color: "rgba(255, 255, 255, 1)",
-    width: width * 0.5,
+    width: "100%",
     height: height * 0.05,
     paddingHorizontal: 5,
     paddingVertical: 5,
@@ -201,7 +210,7 @@ const styles = StyleSheet.create({
     opacity: 1,
     position: "relative",
     fontSize: 13,
-    fontWeight: "500",
+    fontWeight: "800",
     fontStyle: "normal",
     textAlign: "left",
     borderBottomColor: "white",
@@ -209,7 +218,7 @@ const styles = StyleSheet.create({
   },
   password: {
     color: "rgba(255, 255, 255, 1)",
-    width: width * 0.5,
+    width: "100%",
     height: height * 0.05,
     paddingHorizontal: 5,
     paddingVertical: 5,
@@ -217,7 +226,7 @@ const styles = StyleSheet.create({
     opacity: 1,
     position: "relative",
     fontSize: 13,
-    fontWeight: "500",
+    fontWeight: "800",
     fontStyle: "normal",
     textAlign: "left",
     borderBottomColor: "white",
@@ -227,8 +236,8 @@ const styles = StyleSheet.create({
     width: width * 0.65,
     height: height * 0.125,
     position: "relative",
-    top: height * 0.15,
-    marginTop: height * 0.15,
+    top:50,
+    marginTop:30,
     justifyContent: "center",
     alignItems: "center",
   },
@@ -256,17 +265,16 @@ const styles = StyleSheet.create({
   signUp: {
     opacity: 1,
     color: "rgba(56, 199, 130, 1)",
-    position: "absolute",
+    position: "relative",
     fontSize: 20,
-    fontWeight: "800",
+    fontWeight: "900",
     fontStyle: "normal",
   },
   signUpWithContainer: {
-    position: "absolute",
-    width: width * 0.65,
-    height: height * 0.125,
-    top: height * 0.08,
-    marginTop: height * 0.05,
+    position: "relative",
+    width: width * 0.3,
+    height: height * 0.12,
+    marginTop: 15,
     justifyContent: "center",
     alignItems: "center",
   },
@@ -284,36 +292,38 @@ const styles = StyleSheet.create({
   },
   logoContainer: {
     flexDirection: "row",
-    width: width * 0.2,
-    height: width * 0.1,
+    width: width * 0.4,
+    height: width * 0.2,
     justifyContent: "center",
     alignItems: "center",
   },
   googlelogo: {
     opacity: 1,
     position: "relative",
-    width: width * 0.06,
-    height: width * 0.06,
-    marginRight: 5,
+    width: width * 0.07,
+    height: width * 0.07,
+    marginRight: 8,
   },
   facebooklogo: {
     opacity: 1,
     position: "relative",
-    width: width * 0.06,
-    height: width * 0.06,
-    marginLeft: 5,
+    width: width * 0.07,
+    height: width * 0.07,
+    marginLeft: 8,
   },
   shopSquadLogoContainer:{
+    
     position: "relative",
-    height:width * 0.3,
+    height:width * 0.4,
+    top:80,
     width:width,
-    top: height * 0.2,
-    left:15,
-  },
+    left:0,
+    bottom: 0,
+    },
   shopSquadLogo:{
-    height:width * 0.28,
-    width:width * 0.28,
+    height:width * 0.35,
+    width:width * 0.35,
   }
 });
 
-export default Lines;
+export default Content;
