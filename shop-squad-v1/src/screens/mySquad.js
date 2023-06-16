@@ -39,7 +39,7 @@ import Component from "./components/mySquad/component";
 
     
     return(
-      <View>
+      <View style={styles.container}>
         <TopBar/>
         <Component/>
             </View>
@@ -48,16 +48,10 @@ import Component from "./components/mySquad/component";
   
   const styles = StyleSheet.create({
     container:{
-      flex: 1,
-      position: "absolute",
-      borderWidth:5,
-      top: 0,
-      marginTop: height * 0.1,
-      left: 0,
-      bottom: 0,
-      right: 0,
-      height: height * 1,
-      width:'100%',
+      flex: 0,
+      height: "100%",
+      width: "100%",
+      backgroundColor:'white',
     },
     hostingContainer:{
       postion:'relative',

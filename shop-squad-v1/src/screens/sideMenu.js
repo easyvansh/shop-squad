@@ -11,6 +11,12 @@ const SideMenuScreen = ({ navigation }) => {
     };
     // const navigation = useNavigation();
 
+  const handleNotification = () => {
+    navigation.navigate('Notifications'); 
+  };
+  const handleMySquad = () => {
+    navigation.navigate('MySquad'); 
+  };
   const handleLogout = () => {
     navigation.navigate('SignUpPage'); 
   };
@@ -34,11 +40,14 @@ const SideMenuScreen = ({ navigation }) => {
                 <View style = {styles.commandTextContainerActive}>
                 <Text style = {styles.commandTextActive}>Home</Text>
                 </View>
+                <TouchableOpacity onPress={ handleNotification }>
+
                 <View style = {styles.commandTextContainer}>
 
             <Text style = {styles.commandText}>
                 Notifications</Text>
                 </View>
+                </TouchableOpacity>
                 <View style = {styles.commandTextContainer}>
 
             <Text style = {styles.commandText}>Wishlist</Text>
@@ -54,10 +63,13 @@ const SideMenuScreen = ({ navigation }) => {
             <Text style = {styles.commandText}>
                 My Profile</Text>
                 </View>
-                <View style = {styles.commandTextContainer}>
+                <TouchableOpacity onPress={ handleMySquad }>
 
+                <View style = {styles.commandTextContainer}>
+                
             <Text style = {styles.commandText}>My Squad</Text>
                 </View>
+                </TouchableOpacity>
             </View>
             <View style = {styles.commandContainer}>
             <View style = {styles.commandTextContainer}>

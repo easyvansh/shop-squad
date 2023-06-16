@@ -6,13 +6,15 @@ import {
   Dimensions,
   Image,
   TouchableOpacity,
+  FlatList,
 } from "react-native";
-import React from "react";
+import React,{useState, useRef} from "react";
 import Svg, { Defs, Pattern } from "react-native-svg";
 import { Path as SvgPath } from "react-native-svg";
 import { Text as SvgText } from "react-native-svg";
 import { Image as SvgImage } from "react-native-svg";
 import { useNavigation } from "@react-navigation/native";
+import { TouchableWithoutFeedback } from "react-native-gesture-handler";
 
 const { height, width } = Dimensions.get("window");
 
@@ -50,6 +52,21 @@ const CustomButton = ({title,style,backgroundColor,onPress}) =>{
 }
 
 const ProductDescription = () => {
+  
+  const productImages = [
+    { id: 1, image: require("./components/productDescription/productImage1.png") },
+    { id: 2, image: require("./components/productDescription/productImage2.png") },
+    { id: 3, image: require("./components/productDescription/productImage3.png") },
+  ];
+  
+  const renderProductImage = ({item}) =>{
+    return(
+      <Image
+                  source={item.image}
+                  style={styles.productImage}
+                />
+    )
+  }
   const navigation = useNavigation();
   const handleBack= () =>{
     navigation.navigate('HomePage'); 
@@ -63,7 +80,21 @@ const ProductDescription = () => {
   const handleParticipate = () =>{
     navigation.navigate('HomePage'); 
   }
-  
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const carouselRef = useRef(null);
+
+  const handleNextButtonPress = () => {
+    const nextIndex = currentIndex === productImages.length - 1 ? 0 : currentIndex + 1;
+    setCurrentIndex(nextIndex);
+    carouselRef.current.scrollToIndex({ index: nextIndex });
+  };
+
+  const handleBackButtonPress = () => {
+    const backIndex = currentIndex === 0 ? productImages.length - 1 : currentIndex - 1;
+    setCurrentIndex(backIndex);
+    carouselRef.current.scrollToIndex({ index: backIndex });
+  };
+
   // Calculate the width of the filled portion based on the fill value
   const filledWidth = (fillValue / 10) * width;
 
@@ -96,10 +127,39 @@ const ProductDescription = () => {
           </View>
             <View style={styles.productInfo}>
               <View style={styles.productImageContainer}>
-                <Image
-                  source={require("./components/productDescription/productImage.png")}
-                  style={styles.productImage}
-                />
+            <FlatList
+        data={productImages}
+        horizontal
+        ref ={carouselRef}
+        pagingEnabled
+        showsHorizontalScrollIndicator={false}
+        keyExtractor={(item) => item.id}
+        renderItem={renderProductImage}
+        initialScrollIndex={currentIndex}
+        getItemLayout={(productImage, index) => ({
+          length: width,
+          offset: width * index,
+          index,
+        })}
+      /> 
+      <View style={[styles.nextbackContainer,{ position: 'absolute', top: '49%', left: 16 }]}>
+
+      <TouchableOpacity
+        style={{ position: 'absolute', left: 12 }}
+        onPress={handleBackButtonPress}
+      >
+        <Text style={{ fontSize: 40, color: 'rgba(56, 199, 130, 1)' }}>{'<'}</Text>
+      </TouchableOpacity>
+      </View>
+      <View style={[styles.nextbackContainer,{ position: 'absolute', top: '49%', right: 16 }]}>
+
+      <TouchableOpacity
+        style={{ position: 'absolute', right: 12 }}
+        onPress={handleNextButtonPress}
+      >
+        <Text style={{ fontSize:40, color: 'rgba(56, 199, 130, 1)' }}>{'>'}</Text>
+      </TouchableOpacity>
+      </View>
               </View>
               <View style={styles.productNameContainer}>
                 <Text style={styles.productName}>White Latte</Text>
@@ -377,7 +437,16 @@ const styles = StyleSheet.create({
     fontWeight: "700",
     fontStyle: "normal",
   },
-
+  nextbackContainer: {
+    flex: 0,
+    height: 40,
+    width:40,
+    position: "absolute",
+    borderRadius:60,
+    alignItems:'center',
+    justifyContent: 'center',
+    backgroundColor:'rgba(255,255,255,0.8)',
+  },
 });
 
 export default ProductDescription;

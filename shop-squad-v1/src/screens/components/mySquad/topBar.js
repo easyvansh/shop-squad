@@ -20,14 +20,13 @@ import {
   const TopBar= () => {
     const navigation = useNavigation();
     const handleBack= () =>{
-      navigation.navigate('ProductDescription'); 
+      navigation.navigate('HomePage'); 
     }
   
     return (
           <View style={styles.container}>
             < View style={styles.topBar}>
               <TouchableOpacity  style={styles.backButtonContainer} onPress={handleBack}>
-  
                 <Svg
                   style={styles.iconIonicIosArrowBack}
                   preserveAspectRatio="none"
@@ -46,11 +45,13 @@ import {
   
   const styles = StyleSheet.create({
     container: {
-      height: height * 0.05,
+      height: height * 0.08,
       marginTop: height * 0.03,
-      flex: 1,
+      width:"100%",
+      flex: 0,
+      position: "absolute",
+      justifyContent: "center",
       alignItems: "center",
-      flexDirection:'column',
       backgroundColor:'white'
     },
     topBar: {
@@ -60,7 +61,7 @@ import {
       width: width,
       borderBottomLeftRadius: width / 16,
       borderBottomRightRadius: width / 16,
-      borderWidth:5
+      backgroundColor:'white',
     },
     heading:{
         fontSize:25,

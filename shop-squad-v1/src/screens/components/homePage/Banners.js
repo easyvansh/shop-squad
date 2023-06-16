@@ -30,8 +30,11 @@ const Banners = () => {
   const scrollRef = useRef(null);
   const scrollToSlide = (slide) => {
     setActiveSlide(slide);
-    scrollRef.current.scrollTo({ x: slide * (width * 0.9), animated: true });
+   
+      scrollRef.current.scrollTo({ x: slide * (width * 0.9), animated: true });
+    
   };
+  
 
   const navigation = useNavigation();
   const handleProductPress = () => {
@@ -86,7 +89,7 @@ const Banners = () => {
 
   return (
     <View style={styles.container}>
-      <ScrollView showsVerticalScrollIndicator={false} scrollable={true}>
+      <ScrollView ref={scrollRef}showsVerticalScrollIndicator={false} scrollable={true}>
         {/* Heading Banner */}
         <View style={styles.imageContainer}>
           <ScrollView
@@ -171,7 +174,7 @@ const Banners = () => {
             </ScrollView>
           </View>
         </View>
-        <View style={styles.activeSquadWrapper}>
+        <View style={styles.activeSquadWrapper } id="activeSquadSection">
           <Text style={styles.activeSquadText}>Active Squad</Text>
 
           <TouchableOpacity style={styles.button} onPress={handleProductPress}>
