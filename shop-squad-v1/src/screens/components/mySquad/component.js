@@ -8,7 +8,7 @@ import {
     TouchableOpacity,
     TouchableWithoutFeedback
   } from "react-native";
-  import React, { useState } from "react";
+  import React, { useState ,useRef} from "react";
   import Svg, { Defs, Pattern } from "react-native-svg";
   import { Path as SvgPath } from "react-native-svg";
   import { Text as SvgText } from "react-native-svg";
@@ -26,10 +26,15 @@ const Component= () => {
   const handleProductPress = () => {
     navigation.navigate("ProductDescription")
   }
-
-  const gotoSquad = () =>{
-    navigation.navigate('HomePage', { scrollToSection: true });
+  const handleBack= () =>{
+    navigation.navigate('HomePage'); 
   }
+  const scrollViewRef = useRef(null);
+
+  const handleButtonPress = (sectionId) => {
+    navigation.navigate('HomePage',{scrollToSection: "activeSquadSection"})
+  };
+  
   const hostingData = [
       { id: '1',  component: <Product1 onPress={handleProductPress} />  },
       { id: '2', component: <Product2 onPress={handleProductPress}/>},
@@ -47,7 +52,7 @@ const Component= () => {
     
     return(
         <View style={styles.container}>
-      <ScrollView showsVerticalScrollIndicator={false} scrollable={true}>
+      <ScrollView ref={scrollViewRef} showsVerticalScrollIndicator={false} scrollable={true}>
      
                 
                 <View style = {styles.hostingContainer}>
@@ -78,12 +83,14 @@ const Component= () => {
 
                 <View style={styles.completedContainer}>
                 <Text style={[styles.headingText,{color:"rgba(56, 199, 130, 1)"}]}>Completed</Text>
-                <TouchableOpacity onPress={gotoSquad}>
-                    {/* <View style={[styles.button,{backgroundColor}]}> */}
-                    <Text style ={style}>Explore Squads Now</Text>
-                    {/* </View> */}
+                    <View style={styles.exploreContainer}>
+                <Text style={[styles.headingText,{fontSize:18,fontWeight:"400",color:"black"}]}>No Completed Squad Yet.</Text>
+                <TouchableOpacity style ={styles.exploreButton}onPress={handleButtonPress}>
+                <Text style={[styles.headingText,{ fontSize:18,fontWeight:"500",color:"white"}]}>No Completed Squad Yet.</Text>
+                    {/* <Text styles ={styles.exploreText}>Explore Squads Now</Text> */}
 
                     </TouchableOpacity>
+                    </View>
                 </View>
             </ScrollView>
             
@@ -157,9 +164,12 @@ const Component= () => {
       flexDirection:'row',
     },
     completedContainer:{
-      height: height,
-
-      
+      height: height * 0.3,
+      postion:'relative',
+      top:0,
+      marginTop:10,
+      flex:1,
+      backgroundColor:"white",
     },
     
     headingText: {
@@ -171,125 +181,34 @@ const Component= () => {
       paddingHorizontal:25,
       paddingVertical:10,
     },
-    squadContainer: {
-      opacity: 1,
+  exploreContainer:{
+    opacity: 1,
       position: "relative",
-      alignContent: "center",
-      backgroundColor: "rgba(255, 255, 255, 1)",
-      marginBottom: 0,
+      alignItems: "center",
+      flex:0,
+      flexDirection:'column',
+      
+  },
+  exploreButton:{
+    height:50,
+    width:250,
+    marginTop:10,
+    top:0,
+    position: 'relative',
+    backgroundColor:"rgba(56, 199, 130, 0.8)",
+    justifyContent:'center',
+    alignItems:'center',
+    marginLeft: 0,
       paddingTop: 0,
       paddingRight: 0,
       paddingBottom: 0,
       paddingLeft: 0,
-      right:0,
-      marginHorizontal:8,
       borderTopLeftRadius: 15,
       borderTopRightRadius: 15,
       borderBottomLeftRadius: 15,
       borderBottomRightRadius: 15,
-      shadowColor: 'rgba(0, 0, 0, 0.5)',
-      shadowOpacity: 0.8,
-      shadowOffset: {
-      width: 0,
-      height: 4,
-    },
-    elevation: 4,
-    shadowRadius: 8,
-      width: width * 0.44,
-      height: height * 0.28,
-    },
-    squadImageContainer: {
-      height: height * 0.18,
-      width: width * 0.44,
-      overflow: "hidden",
-      borderTopLeftRadius: 15,
-      borderTopRightRadius: 15,
-      
-    },
-    squadImage: {
-      resizeMode: "cover",
-      height: height * 0.18,
-      width: width * 0.44,
-    },
-    iconAwesomeShoppingBag:{
-      width: width * 0.06,
-      height: width * 0.06,
-        resizeMode: "contain",
-        position:'absolute',
-        right:0,
-        marginRight:5,
-    },
-    iconIconicMdAddContainer:{
-      
-      width: width * 0.03,
-      height: width * 0.03,
-      resizeMode: "contain",
-      position:'absolute',
-      right:0,
-      bottom:0,
-      marginBottom:10,
-      alignItems: "center",
-      justifyItems: "center",
-      marginRight:0,
-      backgroundColor:'white',
-      borderRadius:width/32,
-    },
-    iconIonicMdAdd:{
-      width: width * 0.03,
-      height: width * 0.03,
-    },
-    squadUserContainer: {
-      top: 1,
-      left: 10,
-      width: width * 0.4,
-      height: width * 0.125,
-      overflow: "hidden",
-      flexDirection:'row',
-      alignItems:'center',
-    },
-    squadUserImage: {
-      width: width * 0.1,
-      height: width * 0.1,
-      resizeMode: "contain",
-    },
-  
-  ratingsContainer: {
-    flexDirection: "row",
   },
-  ratings: {
-    left: 5,
-    color: "rgba(122, 122, 122, 1)",
-    fontSize: 16,
-    fontWeight: "500",
-    fontStyle: "normal",
-    width: 30,
-  },
-  starContainer: {
-    position: "relative",
-    left: 0.5,
-    height: 25,
-    width: 100,
-    flexDirection: "row",
-  },
-  stars: {
-    width: 18,
-    height: 18,
-    resizeMode: "contain",
-    marginHorizontal: 1,
-  },
-  button: {
-    marginTop:0,
-    // borderWidth:5,/
-    width: width * 0.45,
-    height: height * 0.32,
-    marginBottom: 0,
-    left: 0,
-    marginLeft: 0,
-    paddingTop: 0,
-    paddingRight: 0,
-    paddingBottom: 0,
-    paddingLeft: 0,
-  },
+
   
   
   });

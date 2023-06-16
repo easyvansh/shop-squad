@@ -8,6 +8,7 @@ import {
   SafeAreaView,
   Platform,
   TouchableOpacity,
+  TouchableWithoutFeedback,
 } from "react-native";
 import Svg, {
   Defs,
@@ -26,13 +27,16 @@ const SearchBar = () => {
   const handleBackButtonPress = () => {
     navigation.navigate('HomePage'); 
   };
-
+  const handleProductButtonPress = () =>{
+    navigation.navigate('ProductDescription'); 
+  }
   const weeklyTopImages = [
-    { id: "1", path: require("./components/searchPage/weeklyTop1.png"),text:'CoffeeConnects Coffee' },
-    { id: "2", path: require("./components/searchPage/weeklyTop2.png") ,text:"Reader's Notebook"},
-    { id: "3", path: require("./components/searchPage/weeklyTop3.png"),text:"UCHINO's Towel" },
-    { id: "4", path: require("./components/searchPage/weeklyTop4.png") ,text:"Lululemon's Bottle"},
+    { id: "1", path: require("./components/searchPage/weeklyTop1.png"),text:'CoffeeConnects Coffee',onPress:{handleProductButtonPress} },
+    { id: "2", path: require("./components/searchPage/weeklyTop2.png") ,text:"Reader's Notebook",onPress:{handleProductButtonPress} },
+    { id: "3", path: require("./components/searchPage/weeklyTop3.png"),text:"UCHINO's Towel", onPress:{handleProductButtonPress} },
+    { id: "4", path: require("./components/searchPage/weeklyTop4.png") ,text:"Lululemon's Bottle",onPress:{handleProductButtonPress} },
   ];
+
 
   return (
     <SafeAreaView style={styles.safeArea}>
@@ -88,14 +92,18 @@ const SearchBar = () => {
         </View>
       </View>
       <View style ={styles.weeklyTopContainer}>
+
         <View style = {{alignItems: "center",paddingHorizontal:20,borderColor: "grey",width:'100%',flexDirection:'row',}}>
           <Text style = {{fontSize:24,paddingBottom:15, fontWeight:"800",opacity: 1,color: "rgba(56, 199, 130, 1)",position: "relative", fontStyle: "normal",}}>Top Weekly Products</Text>
         </View>
         {weeklyTopImages.map((image) => (
+      <TouchableWithoutFeedback onPress={handleProductButtonPress}>
         <View style ={styles.weeklyTop}>
             <Image key ={image.id} style ={{width:60,height:60,borderTopLeftRadius: width/16,borderTopRightRadius: width/16, borderBottomLeftRadius: width/16,borderBottomRightRadius: width/16,}}  source ={image.path}/>
             <Text style = {{paddingHorizontal:20,fontSize:20, fontWeight:"600"}}>{image.text}</Text>
+           
         </View>
+      </TouchableWithoutFeedback>
         ))}
       </View>
       </View>
@@ -283,7 +291,8 @@ const styles = StyleSheet.create({
     borderBottomLeftRadius: width/32,
     borderBottomRightRadius: width/32,
     
-  }
+  },
+
 });
 
 export default SearchBar;

@@ -9,6 +9,7 @@ import { createDrawerNavigator } from "@react-navigation/drawer";
 import SideMenuScreen from './src/screens/sideMenu';
 import ProductDescription from './src/screens/productDescription';
 import MySquad from './src/screens/mySquad';
+import Notifications from './src/screens/notifications';
 
 
 const Stack = createStackNavigator();
@@ -25,6 +26,7 @@ function StackNavigator() {
       <Stack.Screen name="SearchPage" component={SearchPage} />
       <Stack.Screen name="ProductDescription" component={ProductDescription} />
       <Stack.Screen name="MySquad" component={MySquad} />
+      <Stack.Screen name="Notifications" component={Notifications} />
       </Stack.Navigator> 
   );
 }
