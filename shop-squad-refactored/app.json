@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "shop-squad-refactored",
-    "slug": "shop-squad-refactored",
+    "name": "shop-app",
+    "slug": "shop-app",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
