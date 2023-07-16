@@ -26,8 +26,8 @@ export default function App() {
   return (
     <>
     <BannerHeader/>
-    {/* <View style = {{marginTop:"25%"}}> */}
-    {/* <FlatList
+    <View >
+    <FlatList
       data={products}
       renderItem={({ item }) => (
         <Pressable
@@ -42,8 +42,8 @@ export default function App() {
       )}
       keyExtractor={(item) => item.id}
       numColumns={2}
-    /> */}
-    {/* </View> */}
+    />
+    </View>
     </>
   );
 }
