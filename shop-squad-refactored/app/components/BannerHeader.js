@@ -37,16 +37,16 @@ export default function BannerHeader() {
         )}
         horizontal
         pagingEnabled
-        showsHorizontalScrollIndicator
+        // showsHorizontalScrollIndicator
         bounces={false}
-        onScroll={Animated.event(
-          [{ nativeEvent: { contentOffset: { x: scrollX } } }],
-          {
-            useNativeDriver: false,
-          }
-        )}
-        scrollEventThrottle={32}
-        ref={slidesRef}
+        // onScroll={Animated.event(
+        //   [{ nativeEvent: { contentOffset: { x: scrollX } } }],
+        //   {
+        //     useNativeDriver: false,
+        //   }
+        // )}
+        // scrollEventThrottle={32}
+        // ref={slidesRef}
       />
     </View>
   );

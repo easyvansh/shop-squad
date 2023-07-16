@@ -69,7 +69,7 @@ const ProductDetails = ({route}) => {
       </ScrollView>
       {/* Add to cart button */}
       <Pressable onPress={addToCart} style={styles.button}>
-        <Text style={styles.buttonText}>Add to Cart</Text>
+        <Text style={styles.buttonText}>Participate Now</Text>
       </Pressable>
       {/* Navigation icon */}
     </View>

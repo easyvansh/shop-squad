@@ -1,0 +1,72 @@
+{"__collections__":{"products":
+{
+    "001":{
+    "name": "Iced Lavender Latte",
+  "image": "https://firebasestorage.googleapis.com/v0/b/shop-squad-acc88.appspot.com/o/Squads%2FproductImage1.png?alt=media&token=53702f3a-4908-4943-9b93-40450373122e",
+  "images": [
+    "https://firebasestorage.googleapis.com/v0/b/shop-squad-acc88.appspot.com/o/Squads%2FproductImage1.png?alt=media&token=53702f3a-4908-4943-9b93-40450373122e",
+    "https://firebasestorage.googleapis.com/v0/b/shop-squad-acc88.appspot.com/o/Squads%2FproductImage2.png?alt=media&token=3e248a44-ad54-4da7-a848-6cf1b218268b",
+    "https://firebasestorage.googleapis.com/v0/b/shop-squad-acc88.appspot.com/o/Squads%2FproductImage3.png?alt=media&token=2852f328-3bc1-4c53-a5bb-d56e48225ca9"
+  ],
+  "price": 3.50,
+  "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed blandit fermentum erat eu consequat. Fusce orci mi, molestie a congue et, vulputate vitae lectus. Morbi porta vulputate velit sit amet mattis. Proin fringilla vel purus convallis dictum. Aliquam mollis justo nec erat eleifend commodo. Fusce egestas volutpat faucibus. Sed lobortis dui in odio porta vestibulum. Morbi pellentesque lectus vel sem luctus, et tempus neque molestie. Maecenas iaculis est purus, quis rhoncus felis faucibus sit amet. Maecenas et vehicula turpis.\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Sed blandit fermentum erat eu consequat. Fusce orci mi, molestie a congue et, vulputate vitae lectus. Morbi porta vulputate velit sit amet mattis. Proin fringilla vel purus convallis dictum. Aliquam mollis justo nec erat eleifend commodo. Fusce egestas volutpat faucibus. Sed lobortis dui in odio porta vestibulum. Morbi pellentesque lectus vel sem luctus, et tempus neque molestie. Maecenas iaculis est purus, quis rhoncus felis faucibus sit amet. Maecenas et vehicula turpis."
+},
+"002":{
+    "name": "Iced Chocolate",
+    "image": "https://firebasestorage.googleapis.com/v0/b/shop-squad-acc88.appspot.com/o/Squads%2Fchocolate.jpg?alt=media&token=5445a876-55ef-4f87-be3e-e1daa40d173d",
+    "images": [
+        "https://firebasestorage.googleapis.com/v0/b/shop-squad-acc88.appspot.com/o/Squads%2Fchocolate.jpg?alt=media&token=5445a876-55ef-4f87-be3e-e1daa40d173d",
+        "https://firebasestorage.googleapis.com/v0/b/shop-squad-acc88.appspot.com/o/Squads%2Fchoc%202.jpg?alt=media&token=64146b00-b98c-4ea5-b2a9-f5f5447af5aa",
+        "https://firebasestorage.googleapis.com/v0/b/shop-squad-acc88.appspot.com/o/Squads%2Fchoco%203.jpg?alt=media&token=dd40f627-bfbe-4ff8-922b-2b743f1966a7"
+    ],
+    "price": 3.10,
+    
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed blandit fermentum erat eu consequat. Fusce orci mi, molestie a congue et, vulputate vitae lectus. Morbi porta vulputate velit sit amet mattis. Proin fringilla vel purus convallis dictum. Aliquam mollis justo nec erat eleifend commodo. Fusce egestas volutpat faucibus. Sed lobortis dui in odio porta vestibulum. Morbi pellentesque lectus vel sem luctus, et tempus neque molestie. Maecenas iaculis est purus, quis rhoncus felis faucibus sit amet. Maecenas et vehicula turpis.\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Sed blandit fermentum erat eu consequat. Fusce orci mi, molestie a congue et, vulputate vitae lectus. Morbi porta vulputate velit sit amet mattis. Proin fringilla vel purus convallis dictum. Aliquam mollis justo nec erat eleifend commodo. Fusce egestas volutpat faucibus. Sed lobortis dui in odio porta vestibulum. Morbi pellentesque lectus vel sem luctus, et tempus neque molestie. Maecenas iaculis est purus, quis rhoncus felis faucibus sit amet. Maecenas et vehicula turpis."
+},
+"003":{
+    "name": "Iced White",
+    "image": "https://firebasestorage.googleapis.com/v0/b/shop-squad-acc88.appspot.com/o/Squads%2FIced-Mocha-.jpg?alt=media&token=36bfdae7-dfc5-4596-bbd9-e8878632dc75",
+    "images": [
+      "https://firebasestorage.googleapis.com/v0/b/shop-squad-acc88.appspot.com/o/Squads%2FIced-Mocha-.jpg?alt=media&token=36bfdae7-dfc5-4596-bbd9-e8878632dc75",
+      "https://firebasestorage.googleapis.com/v0/b/shop-squad-acc88.appspot.com/o/Squads%2FGettyImages-980288178-min.jpg?alt=media&token=37782dd9-60a8-4cc2-9509-dc2221e85871",
+      "https://firebasestorage.googleapis.com/v0/b/shop-squad-acc88.appspot.com/o/Squads%2Ficed-white-chocolate-mocha-1200x1200-1.jpg?alt=media&token=1af5c920-4bca-4ab8-970e-2e95c73768b6"
+    ],
+    "price": 3.20,
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed blandit fermentum erat eu consequat. Fusce orci mi, molestie a congue et, vulputate vitae lectus. Morbi porta vulputate velit sit amet mattis. Proin fringilla vel purus convallis dictum. Aliquam mollis justo nec erat eleifend commodo. Fusce egestas volutpat faucibus. Sed lobortis dui in odio porta vestibulum. Morbi pellentesque lectus vel sem luctus, et tempus neque molestie. Maecenas iaculis est purus, quis rhoncus felis faucibus sit amet. Maecenas et vehicula turpis.\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Sed blandit fermentum erat eu consequat. Fusce orci mi, molestie a congue et, vulputate vitae lectus. Morbi porta vulputate velit sit amet mattis. Proin fringilla vel purus convallis dictum. Aliquam mollis justo nec erat eleifend commodo. Fusce egestas volutpat faucibus. Sed lobortis dui in odio porta vestibulum. Morbi pellentesque lectus vel sem luctus, et tempus neque molestie. Maecenas iaculis est purus, quis rhoncus felis faucibus sit amet. Maecenas et vehicula turpis."
+},
+"004":{
+    "name": "Iced Honey Latte",
+    "image": "https://firebasestorage.googleapis.com/v0/b/shop-squad-acc88.appspot.com/o/Squads%2F0006_Honey_Coffee_Latte_1456461904_8339.jpg?alt=media&token=7273ec05-91d2-482e-ada5-12568faaa6eb",
+    "images": [
+        "https://firebasestorage.googleapis.com/v0/b/shop-squad-acc88.appspot.com/o/Squads%2F0006_Honey_Coffee_Latte_1456461904_8339.jpg?alt=media&token=7273ec05-91d2-482e-ada5-12568faaa6eb",
+        "https://firebasestorage.googleapis.com/v0/b/shop-squad-acc88.appspot.com/o/Squads%2Fhoney.jpg?alt=media&token=a00efdc3-4d86-4b4d-8c8d-36ddbf9726d0",
+        "https://firebasestorage.googleapis.com/v0/b/shop-squad-acc88.appspot.com/o/Squads%2Fhoney%202.jpg?alt=media&token=b5a71ea3-923f-4623-b216-e15d006cdb24"
+    ],
+    "price": 3.20,
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed blandit fermentum erat eu consequat. Fusce orci mi, molestie a congue et, vulputate vitae lectus. Morbi porta vulputate velit sit amet mattis. Proin fringilla vel purus convallis dictum. Aliquam mollis justo nec erat eleifend commodo. Fusce egestas volutpat faucibus. Sed lobortis dui in odio porta vestibulum. Morbi pellentesque lectus vel sem luctus, et tempus neque molestie. Maecenas iaculis est purus, quis rhoncus felis faucibus sit amet. Maecenas et vehicula turpis.\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Sed blandit fermentum erat eu consequat. Fusce orci mi, molestie a congue et, vulputate vitae lectus. Morbi porta vulputate velit sit amet mattis. Proin fringilla vel purus convallis dictum. Aliquam mollis justo nec erat eleifend commodo. Fusce egestas volutpat faucibus. Sed lobortis dui in odio porta vestibulum. Morbi pellentesque lectus vel sem luctus, et tempus neque molestie. Maecenas iaculis est purus, quis rhoncus felis faucibus sit amet. Maecenas et vehicula turpis."
+},
+"005":{
+    "name": "Iced Rose Latte",
+    "image": "https://firebasestorage.googleapis.com/v0/b/shop-squad-acc88.appspot.com/o/Squads%2Frose1.jpg?alt=media&token=72f11445-b633-41f4-b5e8-f8c7b2c02e96",
+    "images": [
+        "https://firebasestorage.googleapis.com/v0/b/shop-squad-acc88.appspot.com/o/Squads%2Frose1.jpg?alt=media&token=72f11445-b633-41f4-b5e8-f8c7b2c02e96",
+        "https://firebasestorage.googleapis.com/v0/b/shop-squad-acc88.appspot.com/o/Squads%2Frose%203.jpg?alt=media&token=b511cc35-bfae-47aa-b4f1-bfb64e279707",
+        "https://firebasestorage.googleapis.com/v0/b/shop-squad-acc88.appspot.com/o/Squads%2Frose.jpg?alt=media&token=ca2cced8-f93a-4546-aa40-0b842b047384"
+    ],
+    "price": 3.30,
+    "description": "Inspired by the original that debuted in 1985, the Air Jordan 1 Low delivers a clean, classic look that's familiar yet fresh. With an iconic design that blends seamlessly with any fit, these shoes are perfect for taking charge.\n\nAdvantages:\n- Encapsulated Air-Sole unit for lightweight cushioning.\n- Genuine leather on the upper for durability and a premium look.\n- Solid rubber outsole for greater traction on different types of surfaces.\n- Color Shown: Palomino/White/Wild Berry\n- Model: 553558-215\n- Proven efficacy\n\nA timeless rubber sole combines with a soft sockliner and encapsulated Nike Air cushioning for all-day comfort. The rubber outsole offers durable traction on a variety of surfaces."
+},
+"006":{
+    "name": "Amber Fizz",
+    "image": "https://firebasestorage.googleapis.com/v0/b/shop-squad-acc88.appspot.com/o/Squads%2Faf%201.jpg?alt=media&token=87bdaf28-9038-454f-a2c5-6e3de6d9e8fc",
+    "images": [
+        "https://firebasestorage.googleapis.com/v0/b/shop-squad-acc88.appspot.com/o/Squads%2Faf%201.jpg?alt=media&token=87bdaf28-9038-454f-a2c5-6e3de6d9e8fc",
+      "https://firebasestorage.googleapis.com/v0/b/shop-squad-acc88.appspot.com/o/Squads%2Faf%202.jpg?alt=media&token=d7c1e777-95af-48b4-a8c8-67073338d820",
+      "https://firebasestorage.googleapis.com/v0/b/shop-squad-acc88.appspot.com/o/Squads%2Faf%203.jpg?alt=media&token=852a288f-279e-47ac-8497-5306a4d56334"
+    ],
+    "price": 3.00,
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed blandit fermentum erat eu consequat. Fusce orci mi, molestie a congue et, vulputate vitae lectus. Morbi porta vulputate velit sit amet mattis. Proin fringilla vel purus convallis dictum. Aliquam mollis justo nec erat eleifend commodo. Fusce egestas volutpat faucibus. Sed lobortis dui in odio porta vestibulum. Morbi pellentesque lectus vel sem luctus, et tempus neque molestie. Maecenas iaculis est purus, quis rhoncus felis faucibus sit amet. Maecenas et vehicula turpis.\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Sed blandit fermentum erat eu consequat. Fusce orci mi, molestie a congue et, vulputate vitae lectus. Morbi porta vulputate velit sit amet mattis. Proin fringilla vel purus convallis dictum. Aliquam mollis justo nec erat eleifend commodo. Fusce egestas volutpat faucibus. Sed lobortis dui in odio porta vestibulum. Morbi pellentesque lectus vel sem luctus, et tempus neque molestie. Maecenas iaculis est purus, quis rhoncus felis faucibus sit amet. Maecenas et vehicula turpis."
+  }
+}
+}
+}
