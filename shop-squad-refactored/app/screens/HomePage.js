@@ -7,6 +7,7 @@ import { productsSlice } from "../store/productsSlice";
 import { useGetBannersQuery, useGetProductsQuery } from "../store/apiSlice";
 import { ActivityIndicator } from "react-native";
 import BannerHeader from "../components/BannerHeader";
+import SquadCard from "../components/SquadCard";
 
 export default function App() {
   // const products = useSelector((state) => state.products.products);
@@ -27,17 +28,19 @@ export default function App() {
     <>
     <BannerHeader/>
     <View >
+      <Text style = {{marginLeft:15,fontSize: 20, fontWeight: "600"}}>Active Squad</Text>
     <FlatList
       data={products}
       renderItem={({ item }) => (
         <Pressable
-          onPress={() => {
-            // dispatch(productsSlice.actions.setSelectedProduct(item.id));
-            navigation.navigate("Product Details",{id:item.id});
-          }}
-          style={styles.itemContainer}
+        onPress={() => {
+          // dispatch(productsSlice.actions.setSelectedProduct(item.id));
+          navigation.navigate("Product Details",{id:item.id});
+        }}
+        style={styles.itemContainer}
         >
-          <Image source={{ uri: item.image }} style={styles.image} />
+          <SquadCard item={item}/>
+          {/* <Image source={{ uri: item.image }} style={styles.image} /> */}
         </Pressable>
       )}
       keyExtractor={(item) => item.id}
