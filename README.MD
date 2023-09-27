@@ -27,30 +27,30 @@ Shop-Squad
 *  `npx expo start`
 
 ## Login Page
-<img align="center" src="https://github.com/easyvansh/shop-squad/blob/main/Assets/Login.png" width=40% height=40%>
+<img src="https://github.com/easyvansh/shop-squad/blob/main/Assets/Login.png" width=40% height=40%>
 
 ## Home Page
-<img align="center" src="https://github.com/easyvansh/shop-squad/blob/main/Assets/Home.png" width=40% height=40%>
-<img align="center" src="https://github.com/easyvansh/shop-squad/blob/main/Assets/Home%202.png" width=40% height=40%>
+<img  src="https://github.com/easyvansh/shop-squad/blob/main/Assets/Home.png" width=40% height=40%>
+<img  src="https://github.com/easyvansh/shop-squad/blob/main/Assets/Home%202.png" width=40% height=40%>
 
 ## SideBar
 <img src="https://github.com/easyvansh/shop-squad/blob/main/Assets/Sidebar.png" width=40% height=40%>
 
 ## Product
-<img align="center" src="https://github.com/easyvansh/shop-squad/blob/main/Assets/Product.png" width=40% height=40%>
+<img  src="https://github.com/easyvansh/shop-squad/blob/main/Assets/Product.png" width=40% height=40%>
 
 ## Buy 
-<img align="center"src="https://github.com/easyvansh/shop-squad/blob/main/Assets/Buy.png" width=40% height=40%>
+<img src="https://github.com/easyvansh/shop-squad/blob/main/Assets/Buy.png" width=40% height=40%>
 
 ## Cart
-<img align="center" src="https://github.com/easyvansh/shop-squad/blob/main/Assets/Empty%20Cart.png" width=40% height=40%>
-<img align="center" src="https://github.com/easyvansh/shop-squad/blob/main/Assets/Cart.png" width=40% height=40%>
+<img  src="https://github.com/easyvansh/shop-squad/blob/main/Assets/Empty%20Cart.png" width=40% height=40%>
+<img src="https://github.com/easyvansh/shop-squad/blob/main/Assets/Cart.png" width=40% height=40%>
 
 ## Reset Password
-<img align="center" src="https://github.com/easyvansh/shop-squad/blob/main/Assets/Reset%20Password.png" width=40% height=40%>
+<img  src="https://github.com/easyvansh/shop-squad/blob/main/Assets/Reset%20Password.png" width=40% height=40%>
 
 ## Logout
-<img align="center" src="https://github.com/easyvansh/shop-squad/blob/main/Assets/Logiut.png" width=40% height=40%>
+<img  src="https://github.com/easyvansh/shop-squad/blob/main/Assets/Logiut.png" width=40% height=40%>
 
 
 
